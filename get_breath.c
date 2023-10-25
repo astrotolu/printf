@@ -9,7 +9,7 @@
  *
  * Return: width.
  */
-int get_breath(const char *format, int *x, va_list list)
+int get_breath(const char *format, int *x, va_list lists)
 {
 	int curr_x;
 	int breath = 0;
@@ -24,7 +24,7 @@ int get_breath(const char *format, int *x, va_list list)
 		else if (format[curr_x] == '*')
 		{
 			curr_x++;
-			breath = va_arg(list, int);
+			breath = va_arg(lists, int);
 			break;
 		}
 		else
